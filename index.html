@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/289bb20c4a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="header">
+        <nav class="nav">
+            <img src="samik.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Samikshya Shrestha </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+             <h1 class="sub-title">About Me</h1>
+             <p>Hello, I’m Samikshya Shrestha, currently pursuing a Bachelor’s degree in Computer Science and Information<br> Technology (BSc CSIT). I’m passionate about technology and its potential to solve real-world problems. My <br>studies are helping me build a strong foundation in both theoretical and practical aspects of computer science,<br> and I’m excited to apply this knowledge to innovative projects and solutions. In addition to my coursework, I <br> enjoy exploring new technologies and staying updated with industry trends.</p>
+
+             <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+             </div>
+             <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/App interface</li>
+                    <li><span>Web Development</span><br>Web app development</li>
+                </ul>
+             </div>
+             <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>College Experience</span><br>Made Star skipper game using python</li>
+                    <li>Organized ACHS cultural Fiesta 2024</li>
+                </ul>
+             </div>
+             <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>BSc.CSIT</span><br>Started in 2021</li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>I design visually stunning, user-friendly websites that reflect your brand and goals. With a focus on intuitive layouts, engaging graphics, and responsive design, I ensure your site looks great and performs flawlessly on all devices.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>I create intuitive and engaging digital experiences through expert UI/UX design. My focus is on crafting user-friendly interfaces and seamless interactions to ensure your product is both visually appealing and easy to use.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>I create sleek, user-friendly app designs that enhance user experience. My focus is on intuitive interfaces and smooth interactions to ensure your app is both functional and engaging on all devices.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>shrestha.samikshya2002@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile-screen"></i>99848849777</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100065546003246"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/shrestha.samikshya/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/samikshya-shrestha-04134823a/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download Cv</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Samikshya</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
